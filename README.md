@@ -43,6 +43,7 @@ Enterprise data platforms (Netflix, Uber, Apple, Databricks, Stripe) decoupled s
 | **[`02_medallion_lakehouse/`](./02_medallion_lakehouse/)** | Medallion Lakehouse | Complete end-to-end pipeline: **Bronze (Raw)** ➔ **Silver (Cleaned/Deduped)** ➔ **Gold (Aggregated KPIs)**. |
 | **[`03_structured_streaming/`](./03_structured_streaming/)** | Structured Streaming | Real-time low-latency stream processing over directory micro-batches. |
 | **[`04_delta_lake/`](./04_delta_lake/)** | Delta Lake ACID & Time Travel | ACID transactions, schema enforcement, time-travel history queries, and instant rollback. |
+| **[`05_production_patterns/`](./05_production_patterns/)** | Secure Automated Pipelines | Zero-leakage PII hashing, broadcast joins, Adaptive Query Execution (AQE), and idempotent partition overwrites. |
 
 ---
 
@@ -57,18 +58,19 @@ uv run --with pyspark pyspark
 
 ### 2. Run Module 1 (Fundamentals)
 ```bash
-uv run --with pyspark python 01_fundamentals/01_dataframe_basics.py
+uv run python 01_fundamentals/01_dataframe_basics.py
 ```
 
 ### 3. Run Module 2 (Medallion Lakehouse Pipeline)
 ```bash
-uv run --with pyspark python 02_medallion_lakehouse/pipeline.py
+uv run python 02_medallion_lakehouse/pipeline.py
 ```
 
-### 4. Run Module 3 (Structured Streaming)
+### 4. Run Module 5 (Secure Automated Production Pipeline)
 ```bash
-uv run --with pyspark python 03_structured_streaming/streaming_demo.py
+uv run python 05_production_patterns/secure_automated_pipeline.py --execution-date 2026-10-07
 ```
+
 
 ---
 
