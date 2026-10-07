@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+.env
+dist/
+build/
+*.egg-info/
+.spark-staging/
+metastore_db/
+derby.log
+checkpoint/
+/tmp/
